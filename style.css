@@ -197,7 +197,6 @@ section .lead {
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   cursor: pointer;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -243,8 +242,7 @@ section .lead {
 .row.row-cols-sm-2 > .col,
 .row.row-cols-md-3 > .col,
 .row.row-cols-lg-4 > .col {
-  display: flex;
-  flex-direction: column;
+ 
 }
 
 .row.row-cols-1 > .col > a,
@@ -253,38 +251,10 @@ section .lead {
 .row.row-cols-lg-4 > .col > a {
   display: flex;
   flex-direction: column;
-  height: 100%;
   text-decoration: none !important;
 }
 
-/* 반응형 그리드 확실히 적용 */
-@media (max-width: 575px) {
-  .row-cols-1 > * {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
 
-@media (min-width: 576px) {
-  .row-cols-sm-2 > * {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-@media (min-width: 768px) {
-  .row-cols-md-3 > * {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-  }
-}
-
-@media (min-width: 992px) {
-  .row-cols-lg-4 > * {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-}
 
 /* 필터 섹션 */
 .filter-section {
@@ -737,10 +707,8 @@ footer a:hover {
     font-size: 2rem;
   }
   
-  .show-card img {
-    height: 250px;
-  }
-}
+ 
+
 
 @media (max-width: 576px) {
   .stat-card {
@@ -755,3 +723,4 @@ footer a:hover {
     font-size: 1.8rem;
   }
 }
+
