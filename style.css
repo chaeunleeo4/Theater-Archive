@@ -1,0 +1,726 @@
+/* Theater Archive 스타일 */
+
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+
+@font-face{
+   font-family:'DNFForgedBlade';font-style:normal;font-weight:normal;
+   src:url('https://cdn.df.nexon.com/img/common/font/DNFForgedBlade-Medium.otf')format('opentype')}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbit', sans-serif;
+  color: #333333;
+  background-color: #F5F5F5;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DNFForgedBlade', sans-serif;
+}
+
+p, span, li, td, th {
+  font-family: 'Orbit', sans-serif;
+}
+
+/* 헤더 */
+header {
+  background: linear-gradient(135deg, #7D2B2B 0%, #DF7171 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+header h1 {
+  font-family: 'DNFForgedBlade', sans-serif;
+}
+
+/* 네비게이션 */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-family: 'DNFForgedBlade', sans-serif;
+  font-size: 1.5rem;
+  color: #DF7171 !important;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Orbit', sans-serif;
+  color: #333333 !important;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #DF7171 !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: #DF7171 !important;
+}
+
+/* 섹션 */
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+section .lead {
+  color: #666666;
+  font-size: 1.1rem;
+}
+
+/* 통계 카드 */
+.stat-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border: 1px solid rgba(223, 113, 113, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border-color: #DF7171;
+}
+
+.stat-card .icon {
+  font-size: 3rem;
+  color: #DF7171;
+  margin-bottom: 1rem;
+}
+
+.stat-card .number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #7D2B2B;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card .label {
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 500;
+}
+
+/* 통계 컨테이너 */
+.stats-container {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-bottom: 2rem;
+  min-height: 300px;
+}
+
+.stats-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333333;
+}
+
+.stat-item {
+  margin-bottom: 1.5rem;
+}
+
+.stat-label {
+  font-family: 'Orbit', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333333;
+}
+
+.stat-count {
+  color: #DF7171;
+  font-weight: 700;
+}
+
+.progress {
+  height: 30px;
+  border-radius: 10px;
+  background-color: #e9ecef;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #7D2B2B 0%, #DF7171 100%);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 통계 테이블 */
+.stats-table {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.stats-table th {
+  background-color: #DF7171;
+  color: white;
+  padding: 0.8rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.stats-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.stats-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* 작품 카드 */
+.show-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+
+
+.show-card-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 0.5rem;
+  min-height: 2.6rem;
+  line-height: 1.3;
+}
+
+.show-card-info {
+  color: #666666;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.show-card-rating {
+  color: #FFD700;
+  font-size: 1rem;
+  margin-top: auto;
+}
+
+/* 작품 목록 그리드 강제 설정 */
+.row.row-cols-1 > .col,
+.row.row-cols-sm-2 > .col,
+.row.row-cols-md-3 > .col,
+.row.row-cols-lg-4 > .col {
+ 
+}
+
+.row.row-cols-1 > .col > a,
+.row.row-cols-sm-2 > .col > a,
+.row.row-cols-md-3 > .col > a,
+.row.row-cols-lg-4 > .col > a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+}
+
+
+
+/* 필터 섹션 */
+.filter-section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-bottom: 2rem;
+}
+
+.filter-section .form-select,
+.filter-section .form-control {
+  border: 2px solid rgba(223, 113, 113, 0.2);
+  border-radius: 10px;
+}
+
+.filter-section .form-select:focus,
+.filter-section .form-control:focus {
+  border-color: #DF7171;
+  box-shadow: 0 0 0 0.2rem rgba(223, 113, 113, 0.25);
+}
+
+/* 버튼 */
+.btn {
+  font-family: 'DNFForgedBlade', sans-serif;
+}
+
+.btn-primary {
+  background-color: #DF7171;
+  border-color: #DF7171;
+}
+
+.btn-primary:hover {
+  background-color: #7D2B2B;
+  border-color: #7D2B2B;
+}
+
+.btn-outline-warning {
+  border-color: #FFD700;
+  color: #FFD700;
+}
+
+.btn-outline-warning:hover {
+  background-color: #FFD700;
+  border-color: #FFD700;
+  color: #333333;
+}
+
+/* 상세 페이지 */
+.work-poster img {
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 100%;
+}
+
+.work-info {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.work-info h1 {
+  color: #7D2B2B;
+  margin-bottom: 1.5rem;
+}
+
+.info-section {
+  padding: 1rem 0;
+}
+
+.info-section h5 {
+  color: #7D2B2B;
+  margin-bottom: 1rem;
+}
+
+.review-section {
+  padding: 1rem 0;
+}
+
+.review-section h5 {
+  color: #7D2B2B;
+  margin-bottom: 1rem;
+}
+
+.review-content {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.other-records-section h5 {
+  color: #7D2B2B;
+  margin-bottom: 1rem;
+}
+
+.card {
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.rating {
+  color: #FFD700;
+  font-weight: 700;
+}
+
+/* 푸터 */
+footer {
+  background-color: #1A1A1A;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+footer p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+footer a {
+  color: #DF7171;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #7D2B2B;
+}
+
+/* 홈 페이지 전용 */
+
+/* 히어로 섹션 */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2c1810 0%, #5a3a2a 100%);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(125, 43, 43, 0.9) 0%, rgba(223, 113, 113, 0.8) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.hero-title {
+  font-family: 'DNFForgedBlade', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 500;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+  font-family: 'DNFForgedBlade', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-description {
+  font-family: 'Orbit', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  max-width: 600px;
+}
+
+/* 통계 하이라이트 */
+.stat-highlight {
+  padding: 2rem 1rem;
+}
+
+.stat-highlight .stat-number {
+  font-family: 'DNFForgedBlade', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #DF7171;
+  margin-bottom: 0.5rem;
+}
+
+.stat-highlight .stat-label {
+  font-family: 'Orbit', sans-serif;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* 섹션 헤더 */
+.section-header {
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'DNFForgedBlade', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-description {
+  font-family: 'Orbit', sans-serif;
+  font-size: 1.1rem;
+  color: #666666;
+  margin-top: 1.5rem;
+}
+
+
+
+/* 포스터 쇼케이스 */
+.poster-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+.poster-frame {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: #eee;
+}
+
+.poster-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.poster-showcase-item {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  aspect-ratio: 2/3;
+  background: white;
+}
+
+.poster-showcase-item:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.poster-showcase-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.poster-showcase-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster-showcase-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.95) 60%);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.6rem;
+  color: white;
+}
+
+.poster-showcase-item:hover .poster-showcase-overlay {
+  opacity: 1;
+}
+
+.poster-showcase-rating {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  background-color: transparent;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 5;
+  border: 2px solid white;
+}
+
+.poster-showcase-info {
+  opacity: 0;
+}
+
+.poster-showcase-item:hover .poster-showcase-info {
+  opacity: 1;
+}
+
+.poster-showcase-title {
+  font-family: 'DNFForgedBlade', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  color: white;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.poster-showcase-meta {
+  font-family: 'Orbit', sans-serif;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.65rem;
+  margin-bottom: 0.15rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#posterShowcase .btn.active {
+  background-color: #DF7171;
+  border-color: #DF7171;
+  color: white;
+  font-weight: 600;
+}
+
+#posterShowcase .btn:hover {
+  background-color: #DF7171;
+  border-color: #DF7171;
+  color: white;
+}
+
+/* 극장별 컬렉션 */
+.theater-card {
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.theater-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+
+
+.theater-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.theater-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: white;
+}
+
+.theater-name {
+  font-family: 'DNFForgedBlade', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.theater-count {
+  font-family: 'Orbit', sans-serif;
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* TOP 버튼 */
+.top-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background-color: #DF7171;
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.top-button:hover {
+  background-color: #7D2B2B;
+  color: white;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  header h4 {
+    font-size: 1.5rem;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+  }
+  
+  .stat-card .number {
+    font-size: 2rem;
+  }
+  
+ 
+
+
+@media (max-width: 576px) {
+  .stat-card {
+    padding: 1.5rem;
+  }
+  
+  .stat-card .icon {
+    font-size: 2.5rem;
+  }
+  
+  .stat-card .number {
+    font-size: 1.8rem;
+  }
+}
+
